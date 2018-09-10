@@ -16,18 +16,6 @@ var (
 	header []string = []string{"Description", "Rating", "Host", "Port", "Proto"}
 )
 
-type row struct {
-	description string
-	rating      string
-	host        string
-	port        string
-	proto       string
-}
-
-func (r *row) csv() []string {
-	return []string{r.description, r.rating, r.host, r.port, r.proto}
-}
-
 func main() {
 	l := log.New(os.Stderr, "", 0)
 
